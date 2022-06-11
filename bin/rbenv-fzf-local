@@ -1,6 +1,6 @@
 #!/bin/sh
 
-version=$(rbenv versions | grep -v '* ' | fzf --select-1 --preview="" --header "* $(rbenv local)" | sed 's/  //g; s/* //g')
+version=$(rbenv versions | grep -v '(set by' | fzf --select-1 --preview="" --header "* $(rbenv local)" | sed 's/  //g; s/* //g')
 
 if [ -n "$version" ]; then
     rbenv local "$version"
