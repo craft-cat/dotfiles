@@ -1,6 +1,6 @@
 #!/bin/sh
 
-versions=$(rbenv versions | fzf --multi --preview="")
+versions=$(rbenv versions | grep -v 'system' |  grep -v '*' | fzf --multi --preview="")
 
 if [ -n "$versions" ]; then
     echo "==> Start to uninstall ruby version: $versions"
