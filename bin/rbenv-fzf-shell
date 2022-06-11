@@ -1,7 +1,0 @@
-#!/bin/sh
-
-version=$(rbenv versions | fzf --select-1 --preview="")
-
-if [ -n "$version" ]; then
-    rbenv shell "$version"
-fi
