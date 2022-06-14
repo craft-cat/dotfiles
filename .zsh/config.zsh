@@ -89,6 +89,7 @@ export PATH="$GOPATH/bin:$PATH"
 # Ruby
 # ----------------------------
 eval "$(rbenv init - zsh)"
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 # ----------------------------
 # Rust
