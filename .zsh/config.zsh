@@ -82,8 +82,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 # Go
 # ----------------------------
 export GO111MODULE=on
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:$GOPATH/bin
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
 # ----------------------------
 # Ruby
