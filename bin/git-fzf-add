@@ -4,7 +4,7 @@
 # git status & fzf diff & add
 # --------------------------------
 chenges=$(unbuffer git status -s |
-    fzf -m --ansi --preview="echo {} | awk '{print \$2}' | xargs git diff --color" |
+    fzf -m --ansi --query="$1" --preview="echo {} | awk '{print \$2}' | xargs git diff --color" |
     awk '{print $2}')
 if [ -n "$chenges" ]; then
     selected=$(echo "$chenges" | tr '\n' ' ')

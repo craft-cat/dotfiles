@@ -3,7 +3,7 @@
 # -------------------------------------------------
 # fzf the repository and open it with vscode
 # -------------------------------------------------
-repo=$(ghq list --full-path | fzf --select-1 --preview "exa -T -L 1 {}")
+repo=$(ghq list --full-path | fzf --select-1 --query="$1" --preview "exa -T -L 1 {}")
 if [ -n "$repo" ]; then
     code "$repo"
 fi

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-versions=$(rbenv install --list-all | fzf --multi --preview="")
+versions=$(rbenv install --list-all | fzf --multi --query="$1" --preview="")
 
 if [ -n "$versions" ]; then
     echo "==> Start to install ruby version: $versions"
