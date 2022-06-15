@@ -3,7 +3,10 @@
 # ----------------------------------------------------
 # Delete (one or multiple) selected application(s)
 # ----------------------------------------------------
-
+if [ -z "$1" ]; then
+    echo "Usage: brew-uninstall-package <package-name> [<package-name> ...]"
+    exit 1
+fi
 packages=$(brew leaves | fzf --multi --preview="")
 
 if [ "$packages" ]; then

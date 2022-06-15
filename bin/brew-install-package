@@ -3,6 +3,11 @@
 # ----------------------------------------------------
 ## Install (one or multiple) selected application(s)
 # ----------------------------------------------------
+
+if [ -z "$1" ]; then
+    echo "Usage: brew-install-package <package-name> [<package-name> ...]"
+    exit 1
+fi
 packages=$(brew search "$@" | fzf --multi --preview="")
 
 if [ -n "$packages" ]; then
