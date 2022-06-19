@@ -29,9 +29,9 @@
     # fetch
     fc = fetch
     # push
-    ps = !git push origin $(git rev-parse --abbrev-ref HEAD)
+    ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
     # pull
-    pl = !git pull origin $(git rev-parse --abberv-ref HEAD)
+    pl = "!git pull origin $(git rev-parse --abberv-ref HEAD)"
     ub = pull --rebase origin master # update branch
     # stash
     save = stash save
