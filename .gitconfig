@@ -48,7 +48,7 @@
     df     = !git hist | fzf --select-1 --preview='' | awk '{print $2}' | xargs -I {} git diff {}^ {} | diff-so-fancy | less --tabs=4 -RFX
     lg     = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
     hist   = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
-    browse = !git-browse # ~/bin/git-browse    
+    browse = !git-browse # ~/bin/git-browse
     # github
     pr = !gh pr view --web
 
