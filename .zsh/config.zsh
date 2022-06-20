@@ -131,3 +131,4 @@ chpwd() {
 # ----------------------------
 export PATH=$PATH:$HOME/bin
 export PATH="$PATH:/opt/homebrew/bin/"
+export PATH="/usr/local/sbin:$PATH"
