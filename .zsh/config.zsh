@@ -90,6 +90,7 @@ export PATH="$(go env GOPATH)/bin:$PATH"
 # ----------------------------
 eval "$(rbenv init - zsh)"
 export PATH="$HOME/.rbenv/shims:$PATH"
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 # ----------------------------
 # Rust
